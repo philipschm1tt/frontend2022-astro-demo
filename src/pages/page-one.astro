@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from "../components/PageHeader.astro";
+import TabsReact from "../components/TabsReact"
+import CarouselReact from "../components/CarouselReact"
+
+---
+<Layout title="Astro Demo">
+	<main>
+		<PageHeader headline="Page One" subHeadline="A page that contains an interactive element"/>
+		<section class="container mx-auto py-10 px-4">
+			<div class="prose prose-lg">
+				<h2 class="mb-4">A basic tab component</h2>
+				<TabsReact client:load/>
+			</div>
+		</section>
+		<div class="bg-blue-100">
+			<section class="container mx-auto py-10 px-4">
+				<div class="prose prose-lg">
+					<h2 class="mb-4">A basic carousel component</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+						invidunt
+						ut
+						labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores
+						et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+						amet.
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+						invidunt
+						ut
+						labore et dolore magna aliquyam erat, sed diam voluptua.
+					</p>
+					<p>
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+						illum
+						dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+						blandit
+						praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
+						dolor
+						sit
+						amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+						dolore
+						magna
+						aliquam erat volutpat.
+					</p>
+				</div>
+				<div class="prose prose-lg py-10">
+					<CarouselReact client:load/>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
