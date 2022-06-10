@@ -1,73 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
-<Layout title="Welcome to Astro.">
+<Layout title="Astro Demo">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card href="https://docs.astro.build/" title="Documentation" body="Learn how Astro works and explore the official API docs." /> 
-			<Card href="https://astro.build/integrations/" title="Integrations" body="Supercharge your project with new frameworks and libraries." /> 
-			<Card href="https://astro.build/themes/" title="Themes" body="Explore a galaxy of community-built starter themes." /> 
-			<Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
-		</ul>
+		<section class="py-20 px-4 bg-blue-900">
+			<div class="container mx-auto px-4">
+				<h1 class="text-4xl font-bold mb-2 text-white">
+					Home Page
+				</h1>
+				<p class="text-2xl text-gray-200">
+					A basic page that does not contain any any interactive elements.
+				</p>
+			</div>
+		</section>
+		<section class="container mx-auto py-10 px-4">
+			<div class="prose prose-lg">
+				<h2>Lorem Ipsum</h2>
+
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+					ut
+					labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+					dolores
+					et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+					ut
+					labore et dolore magna aliquyam erat, sed diam voluptua.
+				</p>
+
+				<p>
+					Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+					illum
+					dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+					praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor
+					sit
+					amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+					magna
+					aliquam erat volutpat.
+				</p>
+				<p>
+					Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+					aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+					esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+					iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
+					nulla
+					facilisi.
+				</p>
+				<p>
+					Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+					placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+					nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+					minim
+					veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+					consequat.
+				</p>
+				<p>
+					Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+					illum
+					dolore eu feugiat nulla facilisis.
+				</p>
+			</div>
+		</section>
 	</main>
 </Layout>
-
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-    	padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%, 100% { background-position-y: 0%; }
-		50% { background-position-y: 80%; }
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4F39FA;
-		padding: 1.0rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
