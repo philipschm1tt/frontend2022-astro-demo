@@ -7,7 +7,13 @@ import CarouselReact from "../components/CarouselReact"
 ---
 <Layout title="Astro Demo">
 	<main>
-		<PageHeader headline="Page One" subHeadline="A page that contains an interactive element"/>
+		<PageHeader headline="Page One – React" subHeadline="A page that contains an interactive element"/>
+		<div class="bg-white">
+			<ul class="container mx-auto flex py-4">
+				<li class="px-4"><a href="/page-one-vue" class="underline">Vue</a></li>
+				<li class="px-4"><a href="/page-one-svelte" class="underline">Svelte</a></li>
+			</ul>
+		</div>
 		<section class="container mx-auto py-10 px-4">
 			<div class="prose prose-lg">
 				<h2 class="mb-4">A basic tab component</h2>
