@@ -17,6 +17,7 @@
     "react-dom": "^18.1.0"
   },
   "dependencies": {
+    "@astrojs/netlify": "^0.4.3",
     "react-awesome-slider": "^4.1.0",
     "react-tabs": "^5.1.0"
   }
