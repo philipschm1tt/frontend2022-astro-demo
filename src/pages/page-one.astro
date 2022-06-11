@@ -15,12 +15,12 @@ import 'react-tabs/style/react-tabs.css';
 		<section class="container mx-auto py-10 px-4">
 			<div class="prose prose-lg">
 				<h2 class="mb-4">A basic tab component</h2>
-				<Tabs client:load>
-					<TabList client:load>
+				<Tabs client:only="react">
+					<TabList client:only="react">
 						<Tab>First Tab</Tab>
 						<Tab>Second Tab</Tab>
 					</TabList>
-					<TabPanel client:load>
+					<TabPanel client:only="react">
 						<h3>Lorem Ipsum</h3>
 						<p>
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
@@ -41,7 +41,7 @@ import 'react-tabs/style/react-tabs.css';
 							labore et dolore magna aliquyam erat, sed diam voluptua.
 						</p>
 					</TabPanel>
-					<TabPanel client:load>
+					<TabPanel client:only="react">
 						<h3>Duis autem</h3>
 						<p>
 							Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
@@ -97,7 +97,7 @@ import 'react-tabs/style/react-tabs.css';
 					</p>
 				</div>
 				<div class="prose prose-lg py-10">
-					<!-- <AwesomeSlider client:load>
+					<!-- <AwesomeSlider client:only="react">
 						{
 							[1, 2, 3, 4, 5].map((number, index) =>
 								<div key={index} class="h-40 bg-blue-400 relative">
