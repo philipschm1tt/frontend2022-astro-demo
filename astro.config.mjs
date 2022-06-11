@@ -4,9 +4,11 @@ import react from "@astrojs/react";
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), vue()],
+  integrations: [react(), tailwind(), vue(), svelte()],
   adapter: netlify(),
-  'vite.ssr.noExternal': ['vant'],
-})
+  'vite.ssr.noExternal': ['vant']
+});
