@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from "../components/PageHeader.astro";
+import Card from "../components/Card.astro";
+
+import {CardContent, getCards} from "../data/cards.server";
+
+const cards = await getCards();
+
+---
+<Layout title="Astro Demo">
+    <main>
+        <PageHeader headline="Page Two" subHeadline="A page that contains data and a form"/>
+        <div class="container container mx-auto lg:grid lg:grid-cols-[3fr_1fr] lg:gap-4">
+            <section class="py-10 px-4">
+                <div class="prose prose-lg">
+                    <h2 class="mb-4">Some Cards</h2>
+                </div>
+                <ul class="list-none flex flex-wrap gap-4">
+                    {cards.map((card: CardContent) => (
+                        <li>
+                            <Card headline={card.title} body={card.body}/>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+            <section class="py-10 px-4 bg-blue-200 shadow-lg">
+                <div class="sticky top-16 prose prose-lg">
+                    <h2 class="mb-4">Create Card</h2>
+                    <form method="post" action="/page-two-form-submit">
+                        <p>
+                            <label>
+                                Card Title:{" "}
+                                <input
+                                    type="text"
+                                    name="title"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Card Body:{" "}
+                                <input
+                                    type="text"
+                                    name="body"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Artificially delay form submit:{" "}
+                                <input
+                                    type="checkbox"
+                                    name="delay"
+                                    class="ml-2 rounded border-gray-300 text-indigo-600 shadow-sm
+                                focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50"
+                                />
+                            </label>
+                        </p>
+                        <p class="mb-0">
+                            <button
+                                type="submit"
+                                class="rounded bg-blue-500 py-2 px-4 text-white shadow-lg hover:bg-blue-600 focus:bg-blue-400 disabled:bg-blue-300"
+                            >
+                                Create CardContent
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</Layout>
