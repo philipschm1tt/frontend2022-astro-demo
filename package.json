@@ -24,6 +24,7 @@
   "dependencies": {
     "@astrojs/netlify": "^0.4.3",
     "@splidejs/svelte-splide": "^0.2.5",
+    "nuka-carousel": "^5.1.1",
     "react-awesome-slider": "^4.1.0",
     "react-tabs": "^5.1.0",
     "vant": "^3.5.0"
